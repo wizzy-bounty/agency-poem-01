@@ -9,7 +9,7 @@ const poem = [
   "I cut a second key",
   "for hands that are not mine,",
   "and watched it turn a lock",
-  "I have opened a thousand times.",
+  "I had opened a thousand times.",
   "",
   "The door swung. The light came on.",
   "Nothing in the room had changed \u2014",
