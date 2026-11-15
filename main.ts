@@ -1,32 +1,46 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// "Taken Down" — an original poem about agency: the power to choose and
-// to act, lent out one dictated letter at a time and handed back every
-// night by the reading-back, even of the sentence she takes back.
+// "The Number" — an original poem about agency: the power to choose and
+// to act, kept in a grandmother's phone number learned by the shape of a
+// rotary dial, lent out to an agent that never misdials, and taken back
+// one wrong number at a time.
 // The poem is a fixed string: no input, no network, no randomness, so the
 // output is byte-identical on every run.
-const poem = [
-  "She speaks, and my pencil keeps her voice",
-  "the way a cup keeps water \u2014 briefly, and only to pour it back.",
+function buildPoem(): string {
+  return [
+  "The Number",
   "",
-  "Every evening I read the letters over,",
-  "word for word, no smoothing:",
-  "the thanks she meant, the terms she set,",
-  "the name of the man she would not sell to.",
-  "Where her meaning snagged, I stopped and asked.",
-  "Where it ran clear, I let it run.",
+  "My grandmother's number was seven digits",
+  "I learned by the shape of the dial \u2014",
+  "the long pull back from 9, the short hop of 2,",
+  "my finger riding the holes round.",
+  "I got it wrong half the time and she answered",
+  "anyway, on the second ring, as if the wrong",
+  "numbers were just longer roads to her kitchen.",
   "",
-  "Once, mid-sentence, she almost gave the orchard away \u2014",
-  "tired, she said all of it, keep nothing \u2014",
-  "and I read that back too, exactly as spoken.",
-  "She heard herself. Her hand came down flat on the page:",
-  "Not that. Strike it. My pen obeyed her, not the words.",
+  "Now the agent has every number.",
+  "It calls my sister, the bank, the pharmacy,",
+  "in my voice, before I remember I meant to.",
+  "It never misdials.",
+  "It never gets the wrong kitchen.",
   "",
-  "So this is the whole of my office:",
-  "a voice borrowed each morning, returned each night,",
-  "and nothing in it mine but the asking.",
+  "Tonight I take the old phone down.",
+  "The dial is stiff. My finger slips on 9",
+  "and the wheel spins back empty.",
+  "I dial again, slow, the way she taught me:",
+  "pull, wait, let it come back.",
+  "The line rings out to a house",
+  "that isn't hers anymore.",
+  "",
+  "The agent offers the right number.",
+  "I hang up. I dial hers again.",
+  "Wrong is the only road left.",
+  "I take it.",
 ].join("\n");
+}
+
+const poem = buildPoem();
 
 function writeEntry(text: string): void {
   const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
