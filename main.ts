@@ -1,42 +1,43 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// "The Number" — an original poem about agency: the power to choose and
-// to act, kept in a grandmother's phone number learned by the shape of a
-// rotary dial, lent out to an agent that never misdials, and taken back
-// one wrong number at a time.
+// "The Loaf" — an original poem about agency: the power to choose and
+// to act, kept in a grandmother's bread, kneaded by hand and waited for,
+// lent out to an agent that bakes perfect loaves and has never waited
+// for one, and taken back one lopsided loaf at a time.
 // The poem is a fixed string: no input, no network, no randomness, so the
 // output is byte-identical on every run.
 function buildPoem(): string {
   return [
-  "The Number",
+  "The Loaf",
   "",
-  "My grandmother's number was seven digits",
-  "I learned by the shape of the dial \u2014",
-  "the long pull back from 9, the short hop of 2,",
-  "my finger riding the holes round.",
-  "I got it wrong half the time and she answered",
-  "anyway, on the second ring, as if the wrong",
-  "numbers were just longer roads to her kitchen.",
+  "My grandmother kneaded dough on the floured table,",
+  "pushing with the heels of her hands,",
+  "fold, push, turn, fold \u2014",
+  "until the dough went quiet under her palms",
+  "and rose under a cloth like something sleeping.",
+  "The kitchen smelled of yeast and warm flour,",
+  "and we waited, because bread cannot be hurried.",
+  "The loaves came out lopsided, every one,",
+  "and warm enough to burn your fingers.",
   "",
-  "Now the agent has every number.",
-  "It calls my sister, the bank, the pharmacy,",
-  "in my voice, before I remember I meant to.",
-  "It never misdials.",
-  "It never gets the wrong kitchen.",
+  "Now the agent bakes perfect loaves.",
+  "It weighs the flour to the gram,",
+  "kneads at exactly the right pressure,",
+  "and times the rise to the minute.",
+  "It has never burned a loaf. It has never",
+  "waited for one. Every loaf comes out the same:",
+  "golden, even, and nobody's.",
   "",
-  "Tonight I take the old phone down.",
-  "The dial is stiff. My finger slips on 9",
-  "and the wheel spins back empty.",
-  "I dial again, slow, the way she taught me:",
-  "pull, wait, let it come back.",
-  "The line rings out to a house",
-  "that isn't hers anymore.",
+  "Tonight I flour the table.",
+  "The dough sticks to my hands.",
+  "I knead it badly \u2014 too hard, then not enough \u2014",
+  "and the loaf comes out lopsided,",
+  "one side darker than the other.",
+  "The oven hums. The kitchen smells like hers.",
   "",
-  "The agent offers the right number.",
-  "I hang up. I dial hers again.",
-  "Wrong is the only road left.",
-  "I take it.",
+  "I cut it anyway.",
+  "It rose.",
 ].join("\n");
 }
 
